@@ -1,5 +1,5 @@
 class TowersOfHanoi
-  attr_reader :board
+  attr_accessor :board
   
   def initialize
     @board = [[3,2,1],[],[]]

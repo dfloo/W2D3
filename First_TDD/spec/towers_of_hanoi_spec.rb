@@ -24,16 +24,10 @@ RSpec.describe do
       expect(game.board[1]).not_to be_empty 
     end
   end
-  
+
   describe '#won' do
     it 'returns true if all disks are placed on either tower one or two' do
-      game.move(0,1)
-      game.move(0,2)
-      game.move(1,2)
-      game.move(0,1)
-      game.move(2,0)
-      game.move(2,1)
-      game.move(0,1)
+      game.board = [[], [3, 2, 1], []]
       expect(game).to be_won
     end
   end
